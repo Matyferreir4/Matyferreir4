@@ -1,0 +1,122 @@
+Algoritmo "Primeiro_sistema_cadastro"
+
+Var
+
+login: caracter
+senha: caracter
+condlogin: inteiro
+ver_email,ver_senha: caracter
+login_cad: caracter
+senha_cad: caracter
+login_cad_veri: caracter
+senha_cad_veri: caracter
+numero_dese_tab: inteiro
+numero_tab: inteiro
+numero_para_tab_sl: inteiro
+numero_para_tab_cl: inteiro
+
+Inicio
+
+    login_cad <- ("teste@gmail.com")
+    senha_cad <- ("ABCD123")
+
+    escreval("Bem vindo ao sistema matemático")
+    escreval("Você possui login: 1-sim , 2-não")
+      leia(condlogin)
+  enquanto condlogin > 2 faca
+    escreval("Digite um numero entre 1 e 2.")
+    escreval("Você possui login: 1-sim , 2-não")
+      leia(condlogin)
+  fimenquanto
+  se condlogin = 2 entao
+    escreval("Venha fazer seu login.")
+    escreval("Digite seu e-mail: ")
+      leia(login)
+    escreval("Digite uma senha: ")
+      leia(senha)
+      escreval("Você foi cadastrado com sucesso.")
+    escreval("Digite seu e-mai: ")
+      leia(ver_email)
+    escreval("Digite sua senha: ")
+      leia(ver_senha)
+
+    se (ver_email = login) e (ver_senha = senha) entao
+    escreval("Seja bem vindo ao calculador de tabuadas.")
+    escreval("Qual número você deseja saber a tabuada: ")
+    leia(numero_tab)
+    escreval("Quantas vezes você deseja saber a tabuada do número ",numero_tab," :")
+    leia(numero_dese_tab)
+    escreval("Veja a tabuada do seu número abaixo: ")
+    para numero_para_tab_sl de 1 ate  numero_dese_tab faca
+    escreval(numero_tab,"x",numero_para_tab_sl,"= ", (numero_tab*numero_para_tab_sl))
+    fimpara
+    escreval("Obrigado por usar nosso sistema. ;)")
+    
+    senao
+    escreval("Senha incorreta, você tem mais uma tentativa")
+    escreval("Digite seu e-mai: ")
+      leia(ver_email)
+    escreval("Digite sua senha: ")
+      leia(ver_senha)
+    se (ver_email = login) e (ver_senha = senha) entao
+    escreval("Seja bem vindo ao calculador de tabuadas.")
+    escreval("Qual número você deseja saber a tabuada: ")
+    leia(numero_tab)
+    escreval("Quantas vezes você deseja saber a tabuada do número ",numero_tab," :")
+    leia(numero_dese_tab)
+    escreval("Veja a tabuada do seu número abaixo: ")
+    para numero_para_tab_sl de 1 ate  numero_dese_tab faca
+    escreval(numero_tab,"x",numero_para_tab_sl,"= ", (numero_tab*numero_para_tab_sl))
+    fimpara
+    escreval("Obrigado por usar nosso sistema. ;)")
+    
+    senao
+    escreval("Você excedou seu número de tentativas, tente novamente mais tarde")
+  fimse
+  fimse
+  fimse
+  
+  
+  se condlogin = 1 entao
+  escreval("Siga as instruções abaixo: ")
+  escreval("Escreva seu e-mail: ")
+  leia(login_cad_veri)
+  escreval("Escreva sua senha: ")
+  leia(senha_cad_veri)
+  
+  se (login_cad_veri = login_cad) e (senha_cad_veri = senha_cad) entao
+  escreval("Seja bem vindo ao calculador de tabuadas.")
+    escreval("Qual número você deseja saber a tabuada: ")
+    leia(numero_tab)
+    escreval("Quantas vezes você deseja saber a tabuada do número ",numero_tab," :")
+    leia(numero_dese_tab)
+    escreval("Veja a tabuada do seu número abaixo: ")
+    para numero_para_tab_sl de 1 ate  numero_dese_tab faca
+    escreval(numero_tab,"x",numero_para_tab_sl,"= ", (numero_tab*numero_para_tab_sl))
+    fimpara
+    escreval("Obrigado por usar nosso sistema. ;)")
+  senao
+  escreval("Sua senha está incorreta, você tem somente mais uma chance")
+  escreval("Escreva seu e-mail: ")
+  leia(login_cad_veri)
+  escreval("Escreva sua senha: ")
+  leia(senha_cad_veri)
+  
+  se (login_cad_veri = login_cad) e (senha_cad_veri = senha_cad) entao
+  escreval("Seja bem vindo ao calculador de tabuadas.")
+    escreval("Qual número você deseja saber a tabuada: ")
+    leia(numero_tab)
+    escreval("Quantas vezes você deseja saber a tabuada do número ",numero_tab," :")
+    leia(numero_dese_tab)
+    escreval("Veja a tabuada do seu número abaixo: ")
+    para numero_para_tab_sl de 1 ate  numero_dese_tab faca
+    escreval(numero_tab,"x",numero_para_tab_sl,"= ", (numero_tab*numero_para_tab_sl))
+    fimpara
+    escreval("Obrigado por usar nosso sistema. ;)")
+  senao
+  Escreval("Você ultrapassou o limite de tentativas, tente novamente mais tarde.")
+  
+  fimse
+  fimse
+  
+Fimalgoritmo
