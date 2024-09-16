@@ -1,0 +1,86 @@
+Algoritmo "semnome"
+
+Var
+   NomeJogadoresCampo: vetor[1..11] de caractere
+   ReservasCampo: vetor[1..7] de caractere
+   NomeJogadoresFutsal: vetor[1..5] de caractere
+   ReservasFutsal: vetor[1..2] de caractere
+   ContadorTitulares, ContadorReservas, ContadorListaTitulares, ContadorListaReservas, Confirmacao: inteiro
+
+Inicio
+
+   escreval("----Olá, seja bem vindo ao nosso cadastro----")
+   escreval("Temos inscrição para 2 tipos de campeonato")
+   escreval("Selecione abaixo qual campeonato deseja fazer inscrição")
+   escreval("1-Futebol de campo, 2-Futebol de salão, 3-Sair: ")
+   leia(Confirmacao)
+
+   se Confirmacao = 1 entao
+
+      escreval("Você selecionou futebol de campo")
+      escreval("Digite o nome dos 11 jogadores titulares: ")
+
+      para ContadorTitulares de 1 ate 11 faca
+         escreva("Jogador ", ContadorTitulares, ": ")
+         leia(NomeJogadoresCampo[ContadorTitulares])
+      fimpara
+
+      escreval("Digite o nome dos 7 jogadores reservas (Caso seja menos, deixe em branco): ")
+
+      para ContadorReservas de 1 ate 7 faca
+         escreva("Jogador reserva ", ContadorReservas, ": ")
+         leia(ReservasCampo[ContadorReservas])
+      fimpara
+
+      escreval("Lista de jogadores Titulares: ")
+      para ContadorListaTitulares de 1 ate 11 faca
+         escreval(NomeJogadoresCampo[ContadorListaTitulares])
+      fimpara
+
+      escreval("Lista de jogadores Reservas: ")
+      para ContadorListaReservas de 1 ate 7 faca
+         escreval(ReservasCampo[ContadorListaReservas])
+      fimpara
+      
+      escreval("Obrigado por se inscrever e boa sorte")
+
+   fimse
+   
+   se Confirmacao = 2 entao
+
+   escreval("Você selecionou futebol de campo")
+      escreval("Digite o nome dos 5 jogadores titulares: ")
+
+      para ContadorTitulares de 1 ate 5 faca
+         escreva("Jogador ", ContadorTitulares, ": ")
+         leia(NomeJogadoresFutsal[ContadorTitulares])
+      fimpara
+
+      escreval("Digite o nome dos 2 jogadores reservas (Caso seja menos, deixe em branco): ")
+
+      para ContadorReservas de 1 ate 2 faca
+         escreva("Jogador reserva ", ContadorReservas, ": ")
+         leia(ReservasFutsal[ContadorReservas])
+      fimpara
+
+      escreval("Lista de jogadores Titulares: ")
+      para ContadorListaTitulares de 1 ate 5 faca
+         escreval(NomeJogadoresFutsal[ContadorListaTitulares])
+      fimpara
+
+      escreval("Lista de jogadores Reservas: ")
+      para ContadorListaReservas de 1 ate 2 faca
+         escreval(ReservasFutsal[ContadorListaReservas])
+      fimpara
+
+      escreval("Obrigado por se inscrever e boa sorte")
+
+   fimse
+   
+   se Confirmacao = 3 entao
+
+   escreval("Obrigado por usar nosso sistema, tenha um ótimo dia.")
+
+   fimse
+
+Fimalgoritmo
